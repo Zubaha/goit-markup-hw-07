@@ -43,24 +43,22 @@
 			<div class="container container-header-mobile">
 				<nav class="nav-mobile">
 					<a class="logo link" href="./index.html"><span class="logo-item">Web</span>Studio</a>
-					<button class="container-header-mobile-button" type="button">
+					<button class="container-header-mobile-button js-open-menu" type="button">
 						<svg class="container-header-mobile-icon">
-							<use href="./images/charm-menu-hamburger.svg"></use>
+							<use href="./images/icons.svg#icon-hamburger"></use>
 						</svg>
 					</button>
 				</nav>
 			</div>
-			<div class="container-mobile-hamburger">
-				<button class="mobile-hamburger-button" data-modal-close>
+			<div class="container-mobile-hamburger js-menu-container">
+				<button class="mobile-hamburger-button js-close-menu" type="button">
 					<svg class="mobile-hamburger-button-icon">
 						<use href="./images/icons.svg#icon-close"></use>
 					</svg>
 				</button>
 				<nav class="hamburger-nav">
 					<ul class="hamburger-nav-list list">
-						<li class="hamburger-nav-item"
-							><a href="./index.html" class="active-link hamburger-nav-link link">Studio</a></li
-						>
+						<li class="hamburger-nav-item"><a href="./index.html" class="active hamburger-nav-link link">Studio</a></li>
 						<li class="hamburger-nav-item"><a href="./portfolio.html" class="hamburger-nav-link link">Portfolio</a></li>
 						<li class="hamburger-nav-item"><a href="" class="hamburger-nav-link link">Contacts</a></li>
 					</ul>
@@ -68,43 +66,45 @@
 				<address class="hamburger-contacts">
 					<ul class="hamburger-contacts-list list">
 						<li class="hamburger-contacts-item"
-							><a href="mailto:info@devstudio.com" class="hamburger-contacts-link link">info@devstudio.com</a></li
+							><a href="mailto:info@devstudio.com" class="hamburger-contacts-link email link">info@devstudio.com</a></li
 						>
 						<li class="hamburger-contacts-item"
-							><a href="tel:+110001111111" class="hamburger-contacts-link link">+11 (000) 111-11-11</a></li
+							><a href="tel:+110001111111" class="hamburger-contacts-link tel link">+11 (000) 111-11-11</a></li
 						>
 					</ul>
 				</address>
-				<ul class="hamburger-socials-list list">
-					<li class="hamburger-socials-item">
-						<a href="" class="hamburger-socials-link link">
-							<svg class="hamburger-socials-icon">
-								<use href="./images/icons.svg#icon-instagram"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="hamburger-socials-item">
-						<a href="" class="hamburger-socials-link link">
-							<svg class="hamburger-socials-icon">
-								<use href="./images/icons.svg#icon-twitter"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="hamburger-socials-item">
-						<a href="" class="hamburger-socials-link link">
-							<svg class="hamburger-socials-icon">
-								<use href="./images/icons.svg#icon-facebook"></use>
-							</svg>
-						</a>
-					</li>
-					<li class="hamburger-socials-item">
-						<a href="" class="hamburger-socials-link link">
-							<svg class="hamburger-socials-icon">
-								<use href="./images/icons.svg#icon-linkedin"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
+				<div class="hamburger-socials-container">
+					<ul class="hamburger-socials-list list">
+						<li class="hamburger-socials-item">
+							<a href="" class="hamburger-socials-link link">
+								<svg class="hamburger-socials-icon">
+									<use href="./images/icons.svg#icon-instagram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="hamburger-socials-item">
+							<a href="" class="hamburger-socials-link link">
+								<svg class="hamburger-socials-icon">
+									<use href="./images/icons.svg#icon-twitter"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="hamburger-socials-item">
+							<a href="" class="hamburger-socials-link link">
+								<svg class="hamburger-socials-icon">
+									<use href="./images/icons.svg#icon-facebook"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="hamburger-socials-item">
+							<a href="" class="hamburger-socials-link link">
+								<svg class="hamburger-socials-icon">
+									<use href="./images/icons.svg#icon-linkedin"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 
@@ -118,7 +118,7 @@
 				<button type="button" class="hero-button" data-modal-open>Order Service</button>
 			</section>
 			<!-- Advantages -->
-			<!-- <section class="fisher-section"
+			<section class="fisher-section"
 				><div class="container">
 					<h2 hidden>Advantages</h2>
 					<ul class="fisher-section-list list">
@@ -129,7 +129,9 @@
 								</svg>
 							</div>
 							<h3 class="fisher-section-heading">Strategy</h3>
-							<p>Our goal is to identify the business problem to walk away with the perfect and creative solution.</p>
+							<p class="fisher-section-text"
+								>Our goal is to identify the business problem to walk away with the perfect and creative solution.</p
+							>
 						</li>
 						<li class="fisher-section-item icon-clock">
 							<div class="fisher-container">
@@ -138,7 +140,9 @@
 								</svg>
 							</div>
 							<h3 class="fisher-section-heading">Punctuality</h3>
-							<p>Bring the key message to the brand's audience for the best price within the shortest possible time.</p>
+							<p class="fisher-section-text"
+								>Bring the key message to the brand's audience for the best price within the shortest possible time.</p
+							>
 						</li>
 						<li class="fisher-section-item icon-diagram">
 							<div class="fisher-container">
@@ -147,7 +151,7 @@
 								</svg>
 							</div>
 							<h3 class="fisher-section-heading">Diligence</h3>
-							<p
+							<p class="fisher-section-text"
 								>Research and confirm brands that present the strongest digital growth opportunities and minimize
 								risk.</p
 							>
@@ -159,13 +163,15 @@
 								</svg>
 							</div>
 							<h3 class="fisher-section-heading">Technologies</h3>
-							<p>Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p>
+							<p class="fisher-section-text"
+								>Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p
+							>
 						</li>
 					</ul>
 				</div>
-			</section> -->
+			</section>
 			<!-- list-of-works -->
-			<!-- <section class="specification-section">
+			<section class="specification-section">
 				<div class="container"
 					><h2 class="specification-section-title">What are we doing</h2>
 					<ul class="specification-section-list list">
@@ -189,9 +195,9 @@
 							/>
 						</li> </ul
 				></div>
-			</section> -->
+			</section>
 			<!-- Our-Team -->
-			<!-- <section class="workers-section"
+			<section class="workers-section"
 				><div class="container">
 					<h2 class="workers-section-title">Our Team</h2>
 					<ul class="workers-section-list list">
@@ -335,9 +341,9 @@
 						</li>
 					</ul>
 				</div>
-			</section> -->
+			</section>
 			<!-- Customers -->
-			<!-- <section class="aside-section">
+			<section class="aside-section">
 				<div class="container">
 					<h2 class="aside-section-title">Customers</h2>
 					<ul class="aside-section-list list">
@@ -384,10 +390,10 @@
 							</a>
 						</li> </ul
 				></div>
-			</section> -->
+			</section>
 		</main>
 		<!-- Footer -->
-		<!-- <footer class="footer-section">
+		<footer class="footer-section">
 			<div class="container footer-container"
 				><div class="footer-container-logo"
 					><a href="./index.html" class="logo-footer link"><span class="logo-item">Web</span>Studio</a>
@@ -441,7 +447,7 @@
 					</form>
 				</div>
 			</div>
-		</footer> -->
+		</footer>
 		<!-- Modal -->
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
