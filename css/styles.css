@@ -43,20 +43,34 @@ ul {
 }
 
 .container {
-	max-width: 1158px;
+	max-width: 428px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 768px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1158px;
+	}
+}
+
 /* Header */
+
+.container-header-mobile-icon {
+	fill: #000;
+}
 .header {
 	border-bottom: 1px solid var(--secondary-buttons);
 }
 
 .container-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	display: none;
 }
 
 .logo {
