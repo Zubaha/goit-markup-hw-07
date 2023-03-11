@@ -202,6 +202,8 @@ ul {
 
 .container-mobile-hamburger {
 	position: fixed;
+	display: flex;
+	flex-direction: column;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -244,7 +246,7 @@ ul {
 }
 
 .hamburger-nav {
-	margin-bottom: 284px;
+	margin-bottom: auto;
 }
 .hamburger-nav-item + .hamburger-nav-item {
 	margin-top: 40px;
@@ -282,29 +284,45 @@ ul {
 	font-style: normal;
 }
 
-.hamburger-contacts-link.email {
+.hamburger-contacts-link.tel {
 	font-weight: 700;
-	font-size: 36px;
+	font-size: 24px;
 	line-height: 1.111;
 	color: var(--brand-color);
 }
 
-.hamburger-contacts-link.tel {
+@media screen and (min-width: 420px) {
+	.hamburger-contacts-link.tel {
+		font-size: 36px;
+	}
+}
+
+.hamburger-contacts-link.email {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 1.2;
 	color: var(--primery-text);
 }
 
-.hamburger-socials-container {
+/* .hamburger-socials-container {
 	display: flex;
 	justify-content: center;
-}
+} */
 
 .hamburger-socials-list {
 	display: flex;
-	gap: 56px;
-	margin: 0 auto;
+}
+
+@media screen and (max-width: 419px) {
+	.hamburger-socials-list {
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width: 420px) {
+	.hamburger-socials-list {
+		gap: 56px;
+	}
 }
 
 .hamburger-socials-link {
@@ -337,14 +355,52 @@ ul {
 	background-color: var(--primery-dark);
 	text-align: center;
 
-	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+		url(../images/people-office-mobile.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 	.hero {
-		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/people-office-mobile@2x.jpg);
+	}
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 1),
+	screen and (min-width: 768px) and (min-resolution: 96dpi),
+	screen and (min-width: 768px) and (min-resolution: 1dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/people-office-tablet.jpg);
+	}
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+	screen and (min-width: 768px) and (min-resolution: 192dpi),
+	screen and (min-width: 768px) and (min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/people-office-tablet@2x.jpg);
+	}
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1),
+	screen and (min-width: 1200px) and (min-resolution: 96dpi),
+	screen and (min-width: 1200px) and (min-resolution: 1dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/people-office-desktop.jpg);
+	}
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+	screen and (min-width: 1200px) and (min-resolution: 192dpi),
+	screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+	.hero {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+			url(../images/people-office-desktop@2x.jpg);
 	}
 }
 
@@ -770,7 +826,7 @@ ul {
 	}
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
 	.footer-container {
 		gap: 72px 24px;
 		flex-wrap: wrap;
@@ -867,6 +923,7 @@ ul {
 
 .footer-form-input {
 	width: 100%;
+	display: block;
 	height: 40px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -933,14 +990,14 @@ ul {
 	align-items: center;
 	padding: 20px 0;
 
-	overflow-y: scroll;
-
 	transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 }
 
 .modal {
-	min-width: 408px;
-	min-height: 576px;
+	height: 600px;
+	max-height: 90vh;
+	max-width: 392px;
+	overflow-y: scroll;
 	padding: 72px 25px 24px 23px;
 
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -949,6 +1006,18 @@ ul {
 
 	position: relative;
 	transition: transform 250ms var(--timing-function);
+}
+
+@media screen and (max-width: 320px) {
+	.modal {
+		width: calc(100% - 2 * 15px);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.modal {
+		max-width: 408px;
+	}
 }
 
 .modal-button {
@@ -1270,7 +1339,13 @@ ul {
 
 .portfolio-image {
 	display: block;
-	width: 396px;
+	width: 100%;
+}
+
+@media screen and (min-width: 420px) {
+	.portfolio-image {
+		width: 396px;
+	}
 }
 
 @media screen and (min-width: 768px) {
