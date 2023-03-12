@@ -313,7 +313,7 @@ ul {
 	display: flex;
 }
 
-@media screen and (max-width: 419px) {
+@media screen and (max-width: 420px) {
 	.hamburger-socials-list {
 		justify-content: space-between;
 	}
@@ -794,7 +794,7 @@ ul {
 	width: 264px;
 	display: inline-block;
 
-	color: var(--secondary-buttons);
+	color: var(--background-ligh);
 }
 
 .logo-footer {
@@ -810,7 +810,9 @@ ul {
 }
 @media screen and (max-width: 767px) {
 	.footer-container-logo {
-		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
